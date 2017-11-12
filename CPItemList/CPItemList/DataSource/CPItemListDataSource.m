@@ -45,6 +45,23 @@
     return [tableView dequeueReusableCellWithIdentifier:self.cellIdentifier];
 }
 
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+
+- (BOOL)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(nonnull NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        NSDictionary *itemInfo = self.itemList[indexPath.row];
+        [self.dataCenter deleteItemWithItemID:[itemInfo[@"primaryKey"] integerValue]];
+        
+        [self.itemList removeObjectAtIndex:indexPath.row];
+        [self.tableview deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
+    return YES;
+}
+
 #pragma mark - getters and setters
 - (CPDataCenter *)dataCenter
 {
