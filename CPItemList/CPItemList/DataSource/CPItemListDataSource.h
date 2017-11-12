@@ -12,6 +12,7 @@
 
 @property (nonatomic, readonly) NSString *cellIdentifier;
 @property (nonatomic, readonly) Class cellClass;
+
 @property (nonatomic, assign) NSInteger groupId;
 
 - (NSDictionary *)itemInfoAtIndexPath:(NSIndexPath *)indexPath;

@@ -11,5 +11,6 @@
 @interface CPItemListViewController : UIViewController
 
 @property (nonatomic, assign) NSInteger groupId;
+@property (nonatomic, strong) NSString *groupName;
 
 @end

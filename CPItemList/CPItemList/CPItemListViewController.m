@@ -107,4 +107,9 @@
     return _tableview;
 }
 
+- (NSString *)title
+{
+    return self.groupName;
+}
+
 @end

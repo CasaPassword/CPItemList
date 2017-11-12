@@ -17,6 +17,7 @@
     NSInteger groupId = [params[@"groupID"] integerValue];
     CPItemListViewController *viewController = [[CPItemListViewController alloc] init];
     viewController.groupId = groupId;
+    viewController.groupName = params[@"groupName"];
     [self cp_pushViewController:viewController animated:YES];
 }
 
