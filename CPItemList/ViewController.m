@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "CPItemListViewController.h"
 
 @interface ViewController ()
 
@@ -14,15 +15,12 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-}
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    CPItemListViewController *viewController = [[CPItemListViewController alloc] init];
+    viewController.groupId = 0;
+    [self.navigationController pushViewController:viewController animated:animated];
 }
 
 

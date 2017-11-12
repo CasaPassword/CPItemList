@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  CPItemListViewController.h
 //  CPItemList
 //
 //  Created by casa on 2017/11/12.
@@ -8,11 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface CPItemListViewController : UIViewController
 
-@property (strong, nonatomic) UIWindow *window;
-
+@property (nonatomic, assign) NSInteger groupId;
 
 @end
-
-
