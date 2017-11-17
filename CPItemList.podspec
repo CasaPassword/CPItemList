@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "CPItemList"
-  s.version      = "3"
+  s.version      = "4"
   s.summary      = "CPItemList."
 
   # This description is used to generate tags and improve search results.
@@ -80,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/CasaPassword/CPItemList.git", :tag => s.version.to_s }
+  s.source       = { :git => "https://bitbucket.org/casapirate/cpitemlist.git", :tag => s.version.to_s }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
